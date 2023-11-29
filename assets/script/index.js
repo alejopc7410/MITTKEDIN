@@ -3,9 +3,16 @@ import {select, selectAll, onEvent} from './utility.js'
 
 const submitBn = select('.submit-btn')
 const postContent = select('textarea')
-const icon = select('.fa-image')
 const fileInput = select('#file-input')
 const content = select('.content')
+
+function validation() {
+    if (!postContent.value.length > 0) {
+        return false
+    } else {
+        return true
+    }
+}
 
 function createPost() {
     let textContent = postContent.value; 
@@ -16,7 +23,6 @@ function createPost() {
     let post = document.createElement('div')
     let postText = document.createElement('section')
     let postInfo = document.createElement('section')
-
     content.appendChild(post)
     post.className = 'post-design'
     post.appendChild(postInfo)
@@ -29,9 +35,17 @@ function createPost() {
     profileImg.className = 'profile-image'
     infoPost.innerText = 'Alejandro Pedraza'
     date.innerText = new Date().toString().substring(4, 16);
-    postText.appendChild(text)
-    text.innerText = textContent
-}
 
+    if (validation()) { 
+        postText.appendChild(text)
+        text.innerText = textContent
+    }
+
+    let imageURL = URL.createObjectURL(fileInput.files[0]);
+    let image = document.createElement('img')
+    image.src = imageURL
+    postText.appendChild(image)
+}
 onEvent('click', submitBn, createPost)
 console.log()
+
