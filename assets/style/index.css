@@ -1,0 +1,92 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    vertical-align: baseline;
+    border-style: none;
+}
+
+.container {
+    width: min(100% - 30px, 1160px);
+    margin-inline: auto;
+}
+
+body {
+    background-color: #F4F2EE;
+}
+
+/*--------------------------*/
+/*------------HEADER--------*/
+/*--------------------------*/
+
+.flexbox {
+    display: flex;
+}
+
+header {
+    height: 15vh;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+h1, .profile {
+    width: 30%;
+}
+
+h1 {
+    font-family: "Open Sans", sans-serif;
+    line-height: 15vh;
+    text-align: left;
+}
+
+span {
+    background-color: #006D5D;
+    color: #fff;
+    margin-right: 3px;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+nav {
+    width: 60%;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    line-height: 15vh;
+    text-align: center;
+}
+
+li {
+    font-family: "Source Sans", sans-serif;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.profile-img {
+    width: 3em;
+    height: 3em;
+    margin-right: 1em;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/*--------------------------*/
+/*-----------BODY-----------*/
+/*--------------------------*/
+
