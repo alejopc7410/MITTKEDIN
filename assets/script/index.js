@@ -7,6 +7,7 @@ const postContent = select('textarea');
 const fileInput = select('#file-input');
 const content = select('.content');
 const profileImg = select('.profile-img img');
+const imgInfo = select('.img-info')
 const userModal = select('.modal');
 const userData = select('.user-data');
 const account = select('.modal li:nth-child(1)');
@@ -66,6 +67,7 @@ function createPost() {
     image.src = imageURL;
     postText.appendChild(image);
 }
+onEvent('change', fileInput, () => {imgInfo.textContent = `${fileInput.files[0].name}`;})
 onEvent('click', submitBn, createPost);
 onEvent('click', profileImg, () => {
     if (userModal.style.display === 'none') {

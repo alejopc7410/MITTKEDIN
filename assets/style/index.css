@@ -137,6 +137,18 @@ textarea {
     display: none;
 }
 
+.submit-section {
+    display: flex;
+}
+
+.img-info {
+    position: relative;
+    left: 21px;
+    height: 1.2em;
+    width: 10em;
+    overflow: hidden;
+}
+
 button {
     position: absolute;
     right: 2em;
@@ -150,6 +162,7 @@ button {
 }
 
 .fa-image {
+    cursor: pointer;
     font-size: 1.3em;
 }
 
