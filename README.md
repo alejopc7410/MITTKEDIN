@@ -1,5 +1,5 @@
 # MITTKEDIN
-Welcome to the Simple Social Network! This is a lightweight and user-friendly social networking platform designed for easy communication and connection with friends and family.
+Welcome! This is a lightweight and user-friendly social networking platform designed for easy communication and connection with friends and family.
 
 ## Table of Contents
 Features
